@@ -110,7 +110,7 @@ app.get("/api/getMessage", async (req, res) => {
       BASE_URL +
         `/apps/${appToken}/tables/${tableId}/records/search?page_size=1`,
       {
-        field_names: ["来信内容"],
+        field_names: ["来信内容", "日出地点"],
         filter: {
           conjunction: "and",
           conditions: [
@@ -151,7 +151,6 @@ app.post("/api/postMessage", async (req, res) => {
       }
     );
     console.log(response.data);
-
     res.json("success");
   } catch (error) {
     res.status(500).json({ error: "无法推送外部数据", detail: error.message });
