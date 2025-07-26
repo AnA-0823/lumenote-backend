@@ -10,7 +10,7 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-const PORT = 4000;
+const PORT = 12400;
 
 // 用于保存最新的 tenantaccesstoken
 let tenantAccessToken = null;
